@@ -37,7 +37,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>bot.Bot</mainClass>
+							<mainClass>src.main.java.bot.Bot</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
