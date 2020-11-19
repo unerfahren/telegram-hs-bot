@@ -1,0 +1,1 @@
+war: java -jar target/hearthstonebot-0.0.1-SNAPSHOT.jar
