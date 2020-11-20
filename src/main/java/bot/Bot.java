@@ -67,6 +67,7 @@ public class Bot extends TelegramLongPollingBot {
 	}
 
 	public static void main(String args[]) {
+		Class.forName("org.postgresql.Driver");
 		ApiContextInitializer.init();
 		TelegramBotsApi telegramBotsApi = new TelegramBotsApi();
 		MyTimerTasck timerTasck = new MyTimerTasck();
