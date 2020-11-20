@@ -10,6 +10,7 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.api.objects.inlinequery.InlineQuery;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException;
+import org.postgresql.*;
 
 public class Bot extends TelegramLongPollingBot {
 
@@ -67,7 +68,13 @@ public class Bot extends TelegramLongPollingBot {
 	}
 
 	public static void main(String args[]) {
-		Class.forName("org.postgresql.Driver");
+		try {
+			Class.forName("org.postgresql.Driver");
+		} catch (ClassNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		System.out.println(Driver.isRegistered());
 		ApiContextInitializer.init();
 		TelegramBotsApi telegramBotsApi = new TelegramBotsApi();
 		MyTimerTasck timerTasck = new MyTimerTasck();
